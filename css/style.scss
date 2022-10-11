@@ -1,0 +1,89 @@
+body {
+  font-family: 'Noto Sans KR', 'dotum', '돋움';
+  font-size: 16px;
+  line-height: 1.4;;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.inner {
+  width: 1272px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  .main-banner {
+    background-color: #000;
+    .inner {
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+  .main-menu {
+    .inner {
+      height: 128px;
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 81px;
+        height: 21px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+      }
+      > ul {
+        display: flex;
+        position: absolute;
+        left: 150px;
+        li {
+          padding: 0 24px;
+        }
+      }
+      .user-menu {
+        position: absolute;
+        right: 50px;
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            position: relative;
+            .material-symbols-outlined {
+              font-size: 28px;
+            }
+            span {
+              &:nth-child(2) {
+                background-color: #18a957;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                font-size: 10px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
