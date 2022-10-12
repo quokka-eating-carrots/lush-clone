@@ -19,9 +19,10 @@ img {
 }
 
 header {
+  position: relative;
   .main-banner {
     background-color: #000;
-    .inner {
+     .inner {
       height: 32px;
       display: flex;
       justify-content: center;
@@ -32,58 +33,70 @@ header {
       }
     }
   }
-  .main-menu {
-    .inner {
-      height: 128px;
+  > .inner {
+    height: 128px;
+    display: flex;
+    .main-menu {
       display: flex;
       align-items: center;
-      .logo {
-        width: 81px;
-        height: 21px;
-        position: absolute;
-        margin: auto;
-        top: 0;
-        left: 0;
-        bottom: 0;
-      }
-      > ul {
-        display: flex;
-        position: absolute;
-        left: 150px;
-        li {
-          padding: 0 24px;
+      justify-content: center;
+      .item {
+        .logo {
+          width: 81px;
+          height: 21px;
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          bottom: 0;
+        }
+        .item__name {
+
+        }
+        .item__contents {
+          width: 100%;
+          position: fixed;
+          left: 0;
+          display: none;
+        }
+        &:hover {
+          .item__contets {
+            display: block;
+          }
         }
       }
-      .user-menu {
+    }
+  }
+  .user-menu {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
         position: absolute;
-        right: 50px;
-        ul {
-          display: flex;
-          gap: 20px;
-          li {
-            position: relative;
-            .material-symbols-outlined {
-              font-size: 28px;
-            }
-            span {
-              &:nth-child(2) {
-                background-color: #18a957;
-                border-radius: 50%;
-                width: 15px;
-                height: 15px;
-                font-size: 10px;
-                color: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                right: 0;
-                top: 0;
-              }
+        right: 0;
+        gap: 20px;
+        li {
+          position: relative;
+          .material-symbols-outlined {
+            font-size: 28px;
+          }
+          span {
+            &:nth-child(2) {
+              background-color: #18a957;
+              border-radius: 50%;
+              width: 15px;
+              height: 15px;
+              font-size: 10px;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              right: 0;
+              top: 0;
             }
           }
         }
       }
     }
   }
-}
