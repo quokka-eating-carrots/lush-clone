@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 img {
@@ -13,7 +14,7 @@ img {
 }
 
 .inner {
-  width: 1272px;
+  width: 1224px;
   margin: 0 auto;
   position: relative;
 }
@@ -34,13 +35,22 @@ header {
     }
   }
   > .inner {
-    height: 128px;
+    height: 96px;
     display: flex;
     .main-menu {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 48px;
       .item {
+        &:hover {
+          .item__contents {
+            display: block;
+            .inner {
+              border-top: 1px solid #d8d8d8;
+            }
+          }
+        }
         .logo {
           width: 81px;
           height: 21px;
@@ -51,17 +61,37 @@ header {
           bottom: 0;
         }
         .item__name {
-
+          position: relative;
+          left: 130px;
+          cursor: pointer;
+          &:hover {
+            color: #18a957;
+          }
         }
         .item__contents {
           width: 100%;
           position: fixed;
           left: 0;
           display: none;
-        }
-        &:hover {
-          .item__contets {
-            display: block;
+          .contents__menu {
+            .inner {
+              display: flex;
+              top: 30px;
+              li {
+                width: 103px;
+                padding: 5px 0;
+                h4 {
+                  font-weight: 900;
+                  margin-top: 20px;
+                  margin-bottom: 10px;
+                }
+                ul {
+                  li {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
           }
         }
       }
