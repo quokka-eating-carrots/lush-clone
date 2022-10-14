@@ -130,3 +130,55 @@ header {
       }
     }
   }
+
+  .season--banner {
+    .inner {
+      height: 600px;
+    }
+    .swiper {
+      width: calc(1224px * 2 + 10px);
+      height: 600px;
+      position: absolute;
+      left: 50%;
+      margin-left: calc((1224px * 2 + 10px) / -2);
+      .swiper-wrapper {
+        .swiper-slide {
+          transition: opacity .5s;
+          &.swiper-slide-prev {
+            opacity: 0;
+          }
+          &.swiper-slide-next {
+            opacity: .5;
+            .banner--des {
+              opacity: 0;
+              transform: translate3d(350px, 0, 0);
+            }
+          }
+          .banner--des {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 120px;
+            transition: .5s;
+            .banner--title1 {
+              font-size: 56px;
+              font-weight: 900;
+              margin-bottom: -10px;
+              transform: translate3d(120px, 0, 0);
+            }
+            .banner--title2 {
+              font-size: 56px;
+              font-weight: 900;
+              transform: translate3d(120px, 0, 0);
+            }
+            .banner--sub1 {
+              transform: translate3d(120px, 0, 0);
+            }
+            .banner--sub2 {
+              transform: translate3d(120px, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
