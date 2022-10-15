@@ -20,7 +20,9 @@ img {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  z-index: 9;
+  background-color: #fff;
   .main-banner {
     background-color: #000;
      .inner {
@@ -70,24 +72,36 @@ header {
         }
         .item__contents {
           width: 100%;
+          height: 350px;
           position: fixed;
+          background-color: #fff;
           left: 0;
           display: none;
+          z-index: 9;
           .contents__menu {
             .inner {
               display: flex;
               top: 30px;
               li {
-                width: 103px;
+                width: 105px;
                 padding: 5px 0;
                 h4 {
                   font-weight: 900;
                   margin-top: 20px;
                   margin-bottom: 10px;
+                  cursor: pointer;
+                  &:hover {
+                    color: #18a957;
+                  }
                 }
                 ul {
                   li {
+                    color: #696969;
                     font-size: 13px;
+                    cursor: pointer;
+                    &:hover {
+                      color: #18a957;
+                    }
                   }
                 }
               }
@@ -133,6 +147,7 @@ header {
 
   .season--banner {
     .inner {
+      top: 120px;
       height: 600px;
     }
     .swiper {
@@ -160,6 +175,7 @@ header {
             position: absolute;
             bottom: 120px;
             transition: .5s;
+            opacity: .8;
             .banner--title1 {
               font-size: 56px;
               font-weight: 900;
@@ -178,6 +194,23 @@ header {
               transform: translate3d(120px, 0, 0);
             }
           }
+        }
+      }
+      .swiper-pagination {
+        &.swiper-pagination-bullets.swiper-pagination-horizontal {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: right;
+        }
+        .swiper-pagination-bullet {
+          width: 30px;
+          height: 2px;
+          border-radius: 0;
+        }
+        &.swiper-pagination-bullet-active {
+          background-color: #696969 !important;
         }
       }
     }
